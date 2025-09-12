@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AchieveTrophies — Official Hub</title>
+
+  <!-- Meta / SEO -->
+  <meta name="description" content="On the impossible mission to complete every game ever made. All AchieveTrophies links in one place." />
+  <meta property="og:title" content="AchieveTrophies — Official Hub" />
+  <meta property="og:description" content="On the impossible mission to complete every game ever made." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://linktr.ee/AchieveTrophies" /> <!-- vervang later door je eigen image URL -->
+  <meta name="theme-color" content="#0DEF7D" />
+
+  <style>
+    /* Base */
+    :root{
+      --bg1:#05060a; --bg2:#0b1220;
+      --glass: rgba(255,255,255,.08);
+      --glow:#0def7d; --glow2:#58a6ff;
+      --text:#e6eefb; --muted:#a9b6cc;
+      --chip: rgba(255,255,255,.12);
+      --shadow: 0 20px 40px rgba(0,0,0,.35);
+      --radius: 18px;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Inter, Arial, sans-serif;
+      color:var(--text);
+      background:
+        radial-gradient(1200px 800px at 10% -10%, #062f99 0%, transparent 60%),
+        radial-gradient(1000px 600px at 100% 0%, #0def7d22 0%, transparent 60%),
+        linear-gradient(180deg, var(--bg1), var(--bg2));
+      display:grid; place-items:center; padding:24px;
+    }
+
+    /* Card */
+    .card{
+      width:min(920px, 100%);
+      background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.04));
+      border: 1px solid rgba(255,255,255,.12);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      overflow:hidden;
+    }
+    .hero{
+      position:relative;
+      padding:32px 28px 22px;
+      display:grid; gap:12px; justify-items:center; text-align:center;
+      background: linear-gradient(180deg, rgba(13,239,125,.10), rgba(88,166,255,.05));
+    }
+    .ring{
+      width:92px; height:92px; border-radius:50%;
+      background:
+        radial-gradient(closest-side, #0b1220 75%, transparent 76%) ,
+        conic-gradient(from 210deg, var(--glow), var(--glow2), var(--glow));
+      filter: drop-shadow(0 0 12px rgba(13,239,125,.45));
+      display:grid; place-items:center;
+      border:1px solid rgba(255,255,255,.18);
+    }
+    .ring span{
+      font-weight:800; letter-spacing:.5px;
+      background: linear-gradient(90deg, #dfffea, #cfe3ff);
+      -webkit-background-clip: text; background-clip:text;
+      color:transparent;
+      font-size:18px;
+    }
+    h1{margin:4px 0 0;font-size:clamp(28px,4.4vw,40px);letter-spacing:.2px}
+    .tagline{margin:2px 0 6px;color:var(--muted);font-size:clamp(14px,2.4vw,16px)}
+    .badges{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin-top:6px}
+    .badge{
+      background: var(--chip); color:var(--text);
+      padding:8px 12px; border-radius:999px; font-size:14px;
+      display:inline-flex; align-items:center; gap:8px; border:1px solid rgba(255,255,255,.12)
+    }
+
+    /* Primary CTA */
+    .cta{
+      display:inline-block; margin:14px auto 2px; padding:14px 18px;
+      border-radius:14px; text-decoration:none; font-weight:800;
+      background: #0def7d; color:#09131f;
+      box-shadow:0 10px 24px rgba(13,239,125,.25);
+      transition: transform .15s ease, box-shadow .15s ease;
+    }
+    .cta:hover{ transform: translateY(-1px); box-shadow:0 14px 28px rgba(13,239,125,.32) }
+
+    /* Link grid */
+    .links{
+      padding:20px; display:grid; gap:12px;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    }
+    .tile{
+      background: var(--glass); border:1px solid rgba(255,255,255,.10);
+      border-radius:14px; padding:14px; display:flex; align-items:center; gap:12px;
+      text-decoration:none; color:var(--text); transition: transform .1s ease, border-color .1s ease;
+    }
+    .tile:hover{ transform: translateY(-2px); border-color: rgba(13,239,125,.6) }
+    .icon{
+      width:34px; height:34px; border-radius:10px; display:grid; place-items:center;
+      background: rgba(255,255,255,.12); flex:0 0 34px; font-size:18px
+    }
+    .tile b{display:block; font-size:16px}
+    .tile span{display:block; color:var(--muted); font-size:13px}
+
+    /* Footer */
+    footer{
+      padding:16px 22px; color:var(--muted);
+      border-top:1px solid rgba(255,255,255,.08);
+      display:flex; justify-content:space-between; align-items:center; gap:10px;
+      font-size:13px; flex-wrap:wrap;
+      background:linear-gradient(180deg, rgba(255,255,255,.02), rgba(255,255,255,.04));
+    }
+    .foot-links{display:flex; gap:14px}
+    .foot-links a{color:var(--muted); text-decoration:none}
+    .foot-links a:hover{color:var(--text)}
+    @media (max-width:560px){ .links{grid-template-columns:1fr} }
+  </style>
+</head>
+
+<body>
+  <div class="card">
+    <section class="hero">
+      <div class="ring"><span>AT</span></div>
+      <h1>AchieveTrophies</h1>
+      <p class="tagline">On the impossible mission to complete every game ever made.</p>
+
+      <div class="badges">
+        <div class="badge">🏆 100% trophies mindset</div>
+        <div class="badge">🎮 Daily progress</div>
+        <div class="badge">🌐 Official Hub</div>
+      </div>
+
+      <!-- Grote primaire knop naar je Linktree -->
+      <a class="cta" href="https://linktr.ee/AchieveTrophies" target="_blank" rel="noopener">All Links →</a>
+    </section>
+
+    <!-- Snelle toegang naar je platforms -->
+    <section class="links">
+      <a class="tile" href="https://youtube.com/@achievetrophies" target="_blank" rel="noopener">
+        <div class="icon">▶️</div>
+        <div><b>YouTube</b><span>Longform runs, uploads & VODs</span></div>
+      </a>
+
+      <a class="tile" href="https://tiktok.com/@achievetrophies" target="_blank" rel="noopener">
+        <div class="icon">🎬</div>
+        <div><b>TikTok</b><span>Highlights & quick clips</span></div>
+      </a>
+
+      <a class="tile" href="https://twitch.tv/achievetrophies" target="_blank" rel="noopener">
+        <div class="icon">🟣</div>
+        <div><b>Twitch</b><span>Live streams & community</span></div>
+      </a>
+
+      <a class="tile" href="https://discord.gg/REPLACE_ME" target="_blank" rel="noopener">
+        <div class="icon">💬</div>
+        <div><b>Discord</b><span>Join the AchieveTrophies community</span></div>
+      </a>
+
+      <a class="tile" href="https://linktr.ee/AchieveTrophies" target="_blank" rel="noopener">
+        <div class="icon">🌐</div>
+        <div><b>Official Website</b><span>AchieveTrophies.com hub & links</span></div>
+      </a>
+
+      <a class="tile" href="https://buymeacoffee.com/achievetrophies" target="_blank" rel="noopener">
+        <div class="icon">💛</div>
+        <div><b>Support</b><span>Fuel the mission</span></div>
+      </a>
+    </section>
+
+    <footer>
+      <span>© <span id="y"></span> AchieveTrophies</span>
+      <div class="foot-links">
+        <a href="https://linktr.ee/AchieveTrophies" target="_blank" rel="noopener">All links</a>
+        <a href="mailto:contact@achievetrophies.com">Contact</a>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    // jaar automatisch
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
