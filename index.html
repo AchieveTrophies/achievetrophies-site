@@ -10,11 +10,10 @@
   <meta property="og:title" content="AchieveTrophies — Official Hub" />
   <meta property="og:description" content="On the impossible mission to complete every game ever made." />
   <meta property="og:type" content="website" />
-  <meta property="og:image" content="https://linktr.ee/AchieveTrophies" /> <!-- vervang later door je eigen image URL -->
+  <meta property="og:image" content="https://linktr.ee/AchieveTrophies" />
   <meta name="theme-color" content="#0DEF7D" />
 
   <style>
-    /* Base */
     :root{
       --bg1:#05060a; --bg2:#0b1220;
       --glass: rgba(255,255,255,.08);
@@ -36,8 +35,6 @@
         linear-gradient(180deg, var(--bg1), var(--bg2));
       display:grid; place-items:center; padding:24px;
     }
-
-    /* Card */
     .card{
       width:min(920px, 100%);
       background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.04));
@@ -61,60 +58,24 @@
       display:grid; place-items:center;
       border:1px solid rgba(255,255,255,.18);
     }
-    .ring span{
-      font-weight:800; letter-spacing:.5px;
-      background: linear-gradient(90deg, #dfffea, #cfe3ff);
-      -webkit-background-clip: text; background-clip:text;
-      color:transparent;
-      font-size:18px;
-    }
+    .ring span{font-weight:800; letter-spacing:.5px; background:linear-gradient(90deg,#dfffea,#cfe3ff); -webkit-background-clip:text; background-clip:text; color:transparent; font-size:18px}
     h1{margin:4px 0 0;font-size:clamp(28px,4.4vw,40px);letter-spacing:.2px}
     .tagline{margin:2px 0 6px;color:var(--muted);font-size:clamp(14px,2.4vw,16px)}
     .badges{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin-top:6px}
-    .badge{
-      background: var(--chip); color:var(--text);
-      padding:8px 12px; border-radius:999px; font-size:14px;
-      display:inline-flex; align-items:center; gap:8px; border:1px solid rgba(255,255,255,.12)
-    }
+    .badge{background:var(--chip);color:var(--text);padding:8px 12px;border-radius:999px;font-size:14px;display:inline-flex;align-items:center;gap:8px;border:1px solid rgba(255,255,255,.12)}
+    .cta{display:inline-block;margin:14px auto 2px;padding:14px 18px;border-radius:14px;text-decoration:none;font-weight:800;background:#0def7d;color:#09131f;box-shadow:0 10px 24px rgba(13,239,125,.25);transition:transform .15s ease, box-shadow .15s ease}
+    .cta:hover{transform:translateY(-1px);box-shadow:0 14px 28px rgba(13,239,125,.32)}
 
-    /* Primary CTA */
-    .cta{
-      display:inline-block; margin:14px auto 2px; padding:14px 18px;
-      border-radius:14px; text-decoration:none; font-weight:800;
-      background: #0def7d; color:#09131f;
-      box-shadow:0 10px 24px rgba(13,239,125,.25);
-      transition: transform .15s ease, box-shadow .15s ease;
-    }
-    .cta:hover{ transform: translateY(-1px); box-shadow:0 14px 28px rgba(13,239,125,.32) }
+    .links{padding:20px;display:grid;gap:12px;grid-template-columns:repeat(auto-fit, minmax(220px, 1fr))}
+    .tile{background:var(--glass);border:1px solid rgba(255,255,255,.10);border-radius:14px;padding:14px;display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--text);transition:transform .1s ease, border-color .1s ease}
+    .tile:hover{transform:translateY(-2px);border-color:rgba(13,239,125,.6)}
+    .icon{width:34px;height:34px;border-radius:10px;display:grid;place-items:center;background:rgba(255,255,255,.12);flex:0 0 34px;font-size:18px}
+    .tile b{display:block;font-size:16px}
+    .tile span{display:block;color:var(--muted);font-size:13px}
 
-    /* Link grid */
-    .links{
-      padding:20px; display:grid; gap:12px;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    }
-    .tile{
-      background: var(--glass); border:1px solid rgba(255,255,255,.10);
-      border-radius:14px; padding:14px; display:flex; align-items:center; gap:12px;
-      text-decoration:none; color:var(--text); transition: transform .1s ease, border-color .1s ease;
-    }
-    .tile:hover{ transform: translateY(-2px); border-color: rgba(13,239,125,.6) }
-    .icon{
-      width:34px; height:34px; border-radius:10px; display:grid; place-items:center;
-      background: rgba(255,255,255,.12); flex:0 0 34px; font-size:18px
-    }
-    .tile b{display:block; font-size:16px}
-    .tile span{display:block; color:var(--muted); font-size:13px}
-
-    /* Footer */
-    footer{
-      padding:16px 22px; color:var(--muted);
-      border-top:1px solid rgba(255,255,255,.08);
-      display:flex; justify-content:space-between; align-items:center; gap:10px;
-      font-size:13px; flex-wrap:wrap;
-      background:linear-gradient(180deg, rgba(255,255,255,.02), rgba(255,255,255,.04));
-    }
-    .foot-links{display:flex; gap:14px}
-    .foot-links a{color:var(--muted); text-decoration:none}
+    footer{padding:16px 22px;color:var(--muted);border-top:1px solid rgba(255,255,255,.08);display:flex;justify-content:space-between;align-items:center;gap:10px;font-size:13px;flex-wrap:wrap;background:linear-gradient(180deg, rgba(255,255,255,.02), rgba(255,255,255,.04))}
+    .foot-links{display:flex;gap:14px}
+    .foot-links a{color:var(--muted);text-decoration:none}
     .foot-links a:hover{color:var(--text)}
     @media (max-width:560px){ .links{grid-template-columns:1fr} }
   </style>
@@ -124,8 +85,8 @@
   <div class="card">
     <section class="hero">
       <div class="ring">
-  <img src="Ronde Logo.png" alt="AchieveTrophies Logo" style="width:80%; border-radius:50%;">
-</div>
+        <img src="Ronde Logo.png" alt="AchieveTrophies Logo" style="width:80%; border-radius:50%;">
+      </div>
       <h1>AchieveTrophies</h1>
       <p class="tagline">On the impossible mission to complete every game ever made.</p>
 
@@ -135,7 +96,6 @@
         <div class="badge">🌐 Official Hub</div>
       </div>
 
-      <!-- Grote primaire knop naar je Linktree -->
       <a class="cta" href="mailto:contact@achievetrophies.com?subject=Hello%20AchieveTrophies&body=Hi%20Bruce,">Contact Me ✉️</a>
     </section>
 
@@ -163,20 +123,22 @@
 
       <a class="tile" href="https://linktr.ee/AchieveTrophies" target="_blank" rel="noopener">
         <div class="icon">🌐</div>
-          <div><b>Linktree</b><span>All AchieveTrophies links in one place</span></div>
-</a>
+        <div><b>Linktree</b><span>All AchieveTrophies links in one place</span></div>
+      </a>
 
       <a class="tile" href="https://buymeacoffee.com/achievetrophies" target="_blank" rel="noopener">
         <div class="icon">💛</div>
         <div><b>Support</b><span>Fuel the mission</span></div>
       </a>
+
+      <!-- ✅ Amazon tile BINNEN het grid -->
+      <a class="tile" href="https://www.amazon.com/?tag=achievetrophi-20"
+         target="_blank" rel="noopener nofollow sponsored" aria-label="My Picks on Amazon US">
+        <div class="icon">🛒</div>
+        <div><b>My Picks (Amazon US)</b><span>Shop & support the mission</span></div>
+      </a>
     </section>
 
-<a class="tile" href="https://www.amazon.com/?tag=achievetrophi-20" target="_blank" rel="noopener">
-  <div class="icon">🛒</div>
-  <div><b>My Picks (Amazon US)</b><span>Shop & support the mission</span></div>
-</a>
-    
     <footer>
       <span>© <span id="y"></span> AchieveTrophies</span>
       <div class="foot-links">
@@ -187,7 +149,6 @@
   </div>
 
   <script>
-    // jaar automatisch
     document.getElementById('y').textContent = new Date().getFullYear();
   </script>
 </body>
